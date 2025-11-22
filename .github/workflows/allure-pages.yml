@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait for CI artifact
+        uses: fountainhead/action-wait-for-check@v1.0.0
+        with:
+          checkName: "run-tests"
+          ref: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Download Allure HTML artifact
         uses: actions/download-artifact@v4
         with:
