@@ -3,7 +3,8 @@ name: Publish Allure Report
 on:
   workflow_run:
     workflows: [ "Magento Hybrid Automation CI" ]
-    types: [ completed ]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -11,14 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
       - name: Download Allure HTML artifact
         uses: actions/download-artifact@v4
         with:
           name: allure-html-report
           path: ./allure-report
+          run-id: ${{ github.event.workflow_run.id }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
