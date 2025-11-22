@@ -15,6 +15,8 @@
 ### ii. Run Tests
 - mvn test verify
 ### iii. Generate Allure Report
-- Create the report: mvn allure:report
-- Open the report: mvn allure:serve
+- Create the report:
+  - mvn allure:report
+- Open the report:
+  - mvn allure:serve
 
