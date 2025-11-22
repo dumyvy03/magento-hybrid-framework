@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8696","TC_09_Update_Quantity_With_Invalid_Character_In_Cart","Magento - Automation Testing","2025-11-22","passed","2025-11-22","com.magento.testcases.User_04_Shopping_Cart","Run on Firefox browser","com.magento.testcases.User_04_Shopping_Cart","TC_09_Update_Quantity_With_Invalid_Character_In_Cart"

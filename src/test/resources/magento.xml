@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Magento - Automation Testing">
+    <parameter name="browsers" value="firefox"/>
+    <parameter name="userUrl" value="https://live.techpanda.org/"/>
+
+    <listeners>
+        <listener class-name="com.magento.allure.AllureTestListener"/>
+    </listeners>
+
+    <test name="Run on Firefox browser">
+        <classes>
+            <class name="com.magento.allure.AllureSetup"/>
+            <class name="com.magento.testcases.User_01_Create_Account"/>
+            <class name="com.magento.testcases.User_02_Login"/>
+            <class name="com.magento.testcases.User_03_Search_Product"/>
+            <class name="com.magento.testcases.User_04_Shopping_Cart"/>
+            <class name="com.magento.testcases.User_05_Edit_Account_Information"/>
+        </classes>
+    </test>
+</suite>
